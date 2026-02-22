@@ -1,0 +1,5 @@
+Red simulada: 192.168.10.0/24
+Servidor Zabbix: 192.168.10.10
+Cliente 1: 192.168.10.20
+Cliente 2: 192.168.10.30
+
