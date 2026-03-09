@@ -1,6 +1,7 @@
-Red simulada: 192.168.1.0/24
-Gatway: 192.168.1.1
-Servidor Zabbix: 192.168.1.2
-Cliente 1: 192.168.1.3
-Cliente 2: 192.168.1.4
+Red simulada: 192.168.10.0/24
+Server Servicios: 192.168.10.1 (fija) -- LAN
+Servidor Zabbix: 192.168.10.10 (fija)
+Cliente - ubuntu 1: 192.168.10.100(DHCP)
+Cliente - windows 2: 192.168.10.101
+10.0.3.15 -WAN
 
