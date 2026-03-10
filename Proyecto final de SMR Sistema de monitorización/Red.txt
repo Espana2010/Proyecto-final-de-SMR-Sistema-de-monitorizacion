@@ -1,7 +1,0 @@
-Red simulada: 192.168.10.0/24
-Server Servicios: 192.168.10.1 (fija) -- LAN
-Servidor Zabbix: 192.168.10.10 (fija)
-Cliente - ubuntu 1: 192.168.10.100(DHCP)
-Cliente - windows 2: 192.168.10.101
-10.0.3.15 -WAN
-
