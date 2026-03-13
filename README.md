@@ -1,15 +1,15 @@
-# Sistema de MonitorizaciÛn y Control de Red DomÈstica  
-Proyecto Final ñ 2∫ SMR  
-Autores: **Ricardo Gordo, Alejandro Casatejada y Pablo VÈlez**  
-Tutor: **CÈsar**  
-IES Clara del Rey ñ Madrid  
+# Sistema de Monitorizaci√≥n y Control de Red Dom√©stica  
+Proyecto Final ‚Äì 2¬∫ SMR  
+Autores: **Ricardo Gordo, Alejandro Casatejada y Pablo V√©lez**  
+Tutor: **C√©sar**  
+IES Clara del Rey ‚Äì Madrid  
 
 ---
 
-## ?? DescripciÛn del Proyecto
+## Descripci√≥n del Proyecto
 
-Este proyecto implementa un sistema completo de monitorizaciÛn para una red domÈstica simulada mediante **VirtualBox** y **GNS3**.  
-El objetivo es supervisar el estado de los equipos, detectar fallos en tiempo real y generar alertas autom·ticas utilizando **Zabbix** como herramienta principal.
+Este proyecto implementa un sistema completo de monitorizaci√≥n para una red dom√©stica simulada mediante **VirtualBox** y **GNS3**.  
+El objetivo es supervisar el estado de los equipos, detectar fallos en tiempo real y generar alertas autom√°ticas utilizando **Zabbix** como herramienta principal.
 
 La red incluye:
 
@@ -20,8 +20,8 @@ La red incluye:
 - Switch virtual en GNS3  
 
 **Importante:**  
-En esta topologÌa **no existe un router independiente**.  
-El propio **ServidorServicios act˙a como router**, ya que:
+En esta topolog√≠a **no existe un router independiente**.  
+El propio **ServidorServicios act√∫a como router**, ya que:
 
 - Tiene **dos interfaces de red**  
 - Tiene **IP forwarding activado**  
@@ -31,30 +31,30 @@ El propio **ServidorServicios act˙a como router**, ya que:
 
 ---
 
-## ?? Objetivos del Proyecto
+## Objetivos del Proyecto
 
-### ?? Objetivos tÈcnicos
-- DiseÒar una topologÌa de red domÈstica funcional.  
-- Configurar m·quinas virtuales en VirtualBox.  
+### Objetivos t√©cnicos
+- Dise√±ar una topolog√≠a de red dom√©stica funcional.  
+- Configurar m√°quinas virtuales en VirtualBox.  
 - Integrarlas en GNS3 mediante un switch virtual.  
 - Instalar y configurar Zabbix Server + MariaDB.  
 - Instalar agentes Zabbix en los equipos.  
 - Monitorizar CPU, RAM, disco, ping y servicios.  
 - Crear triggers personalizados.  
-- Realizar pruebas de estrÈs reales.  
-- Configurar alertas autom·ticas por correo.
+- Realizar pruebas de estr√©s reales.  
+- Configurar alertas autom√°ticas por correo.
 
-### ?? Objetivos formativos
-- Aprender administraciÛn de sistemas Linux y Windows.  
-- Comprender la monitorizaciÛn profesional.  
-- Documentar un proyecto tÈcnico de forma completa.  
-- Preparar una defensa ante tribunal acadÈmico.
+### Objetivos formativos
+- Aprender administraci√≥n de sistemas Linux y Windows.  
+- Comprender la monitorizaci√≥n profesional.  
+- Documentar un proyecto t√©cnico de forma completa.  
+- Preparar una defensa ante tribunal acad√©mico.
 
 ---
 
-## ??? Arquitectura del Sistema
+## Arquitectura del Sistema
 
-La arquitectura est· compuesta por:
+La arquitectura est√° compuesta por:
 
 - **ServidorServicios (Router + DHCP + DNS + Web)**  
   - 2 interfaces de red  
@@ -74,64 +74,64 @@ La arquitectura est· compuesta por:
 
 ---
 
-## ?? TopologÌa de Red
+## Topolog√≠a de Red
 
-La topologÌa fue diseÒada en **GNS3**, integrando m·quinas VirtualBox mediante adaptadores bridged e internos.
+La topolog√≠a fue dise√±ada en **GNS3**, integrando m√°quinas VirtualBox mediante adaptadores bridged e internos.
 
 Incluye:
 
 - Switch virtual  
-- ServidorServicios (que act˙a como router)  
+- ServidorServicios (que act√∫a como router)  
 - Servidor Zabbix  
 - Cliente Ubuntu  
 - Cliente Windows  
 
 ---
 
-## ?? ConfiguraciÛn del ServidorServicios
+## Configuraci√≥n del ServidorServicios
 
 Incluye:
 
-- ConfiguraciÛn de Netplan  
-- ActivaciÛn de IP forwarding  
+- Configuraci√≥n de Netplan  
+- Activaci√≥n de IP forwarding  
 - Reglas IPTables persistentes (NAT)  
-- InstalaciÛn y configuraciÛn de DHCP  
-- InstalaciÛn y configuraciÛn de BIND9  
-- InstalaciÛn de Apache2  
+- Instalaci√≥n y configuraci√≥n de DHCP  
+- Instalaci√≥n y configuraci√≥n de BIND9  
+- Instalaci√≥n de Apache2  
 
-Todas las capturas est·n documentadas en la memoria final.
+Todas las capturas est√°n documentadas en la memoria final: [memoria_final](02_Memoria)
 
 ---
 
-## ??? ConfiguraciÛn de Clientes
+## Configuraci√≥n de Clientes
 
 ### Cliente Ubuntu
-- ConfiguraciÛn de red  
-- RecepciÛn de IP por DHCP  
+- Configuraci√≥n de red  
+- Recepci√≥n de IP por DHCP  
 - Pruebas de conectividad  
-- ResoluciÛn DNS  
+- Resoluci√≥n DNS  
 - Rutas y ping a Internet  
 
 ### Cliente Windows
-- ConfiguraciÛn de red  
-- InstalaciÛn del agente Zabbix  
-- VerificaciÛn de conectividad  
+- Configuraci√≥n de red  
+- Instalaci√≥n del agente Zabbix  
+- Verificaci√≥n de conectividad  
 
 ---
 
-## ?? InstalaciÛn del Servidor Zabbix
+##  Instalaci√≥n del Servidor Zabbix
 
 Incluye:
 
-- InstalaciÛn del repositorio oficial  
-- InstalaciÛn de Zabbix Server, Frontend y Agent  
-- ConfiguraciÛn de MariaDB  
-- ConfiguraciÛn del frontend web  
-- Inicio de servicios y verificaciÛn  
+- Instalaci√≥n del repositorio oficial  
+- Instalaci√≥n de Zabbix Server, Frontend y Agent  
+- Configuraci√≥n de MariaDB  
+- Configuraci√≥n del frontend web  
+- Inicio de servicios y verificaci√≥n  
 
 ---
 
-## ?? MonitorizaciÛn
+##  Monitorizaci√≥n
 
 Se monitorizan:
 
@@ -145,20 +145,20 @@ Se monitorizan:
 
 ---
 
-## ?? Triggers Personalizados
+##  Triggers Personalizados
 
 Se han creado triggers para:
 
 - CPU alta  
 - RAM baja  
 - Disco bajo  
-- Ping caÌdo  
-- PÈrdida de paquetes  
+- Ping ca√≠do  
+- P√©rdida de paquetes  
 - Servicios inactivos  
 
 ---
 
-## ?? Pruebas de EstrÈs
+##  Pruebas de Estr√©s
 
 Se realizaron pruebas reales:
 
@@ -172,7 +172,7 @@ stress --vm 1 --vm-bytes 6G --vm-hang 0
 dd if=/dev/zero of=/tmp/testfile bs=1M count=5000
 
 
-### ValidaciÛn manual
+### Validaci√≥n manual
 - top 
 - free -h 
 - df -h 
@@ -181,34 +181,34 @@ dd if=/dev/zero of=/tmp/testfile bs=1M count=5000
 
 ---
 
-## ?? Acciones Autom·ticas
+## ?Acciones Autom√°ticas
 
-Zabbix envÌa alertas por correo cuando:
+Zabbix env√≠a alertas por correo cuando:
 
 - Un host cae  
 - Un servicio falla  
-- Un recurso llega a un umbral crÌtico  
+- Un recurso llega a un umbral cr√≠tico  
 
 ---
 
-## ?? Capturas
+##  Capturas
 
-Todas las capturas est·n organizadas en la carpeta:
+Todas las capturas est√°n organizadas en la carpeta: [Evidencias](01_Capturas)
 
-La memoria final incluye cada captura en su capÌtulo correspondiente.
-
----
-
-## ?? ConclusiÛn
-
-Este proyecto demuestra la implementaciÛn completa de un sistema de monitorizaciÛn profesional en un entorno domÈstico simulado.  
-Permite detectar fallos reales, generar alertas autom·ticas y visualizar el estado de la red en tiempo real.
+La memoria final incluye cada captura en su cap√≠tulo correspondiente.--> [memoria_final](02_Memoria)
 
 ---
 
-## ?? Autor
+## Conclusi√≥n
 
-**Ricardo Gordo, Alejandro Casatejada y Pablo VÈlez**  
-2∫ SMR ñ IES Clara del Rey
+Este proyecto demuestra la implementaci√≥n completa de un sistema de monitorizaci√≥n profesional en un entorno dom√©stico simulado.  
+Permite detectar fallos reales, generar alertas autom√°ticas y visualizar el estado de la red en tiempo real.
+
+---
+
+## Autores
+
+**Ricardo Gordo, Alejandro Casatejada y Pablo V√©lez**  
+2¬∫ SMR ‚Äì IES Clara del Rey
 
 
