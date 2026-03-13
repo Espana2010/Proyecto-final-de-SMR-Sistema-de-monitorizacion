@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación TFG - Sistema de Monitorización</title>
+    <link rel="stylesheet" href="Sistema-de-Monitorizacion-y-Control-de-Red-Domestica.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <audio id="applauseSound" preload="auto" volume="1.0">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1808fbf15f.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- CONTROLES DE NAVEGACIÓN - ARRIBA -->
+    <div class="controls-top-bar">
+        <button id="btnIndex" class="btn-index" title="Presiona 'W' para ir al índice">📋 Índice</button>
+        <button id="btnEnd" class="btn-nav">Final ⏭️</button>
+    </div>
+
+    <!-- CONTROLES DE NAVEGACIÓN - ABAJO -->
+    <div class="controls-bottom-bar">
+        <button id="btnPrev" class="btn-nav">← Atrás</button>
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">20</span>
+        </div>
+        <button id="btnNext" class="btn-nav">Adelante →</button>
+    </div>
+
+    <!-- PORTADA -->
+    <section class="slide center">
+        <h1 class="big">Sistema de Monitorización y Control de Red Doméstica</h1>
+        <h2>Proyecto Final – 2º SMR</h2>
+        <p><strong>Autores:</strong> Ricardo Gordo, Alejandro Casatejada y Pablo Vélez</p>
+        <p><strong>IES Clara del Rey – Madrid</strong></p>
+    </section>
+
+    <!-- ÍNDICE -->
+    <section class="slide">
+        <h1>Índice</h1>
+        <ul class="index-list">
+            <li><a href="#" class="index-link" data-slide="2">Descripción del Proyecto</a></li>
+            <li><a href="#" class="index-link" data-slide="3">Objetivos</a></li>
+            <li><a href="#" class="index-link" data-slide="4">Herramientas y Tecnologías</a></li>
+            <li><a href="#" class="index-link" data-slide="5">Topología de Red</a></li>
+            <li><a href="#" class="index-link" data-slide="6">Arquitectura del Sistema</a></li>
+            <li><a href="#" class="index-link" data-slide="7">Configuración ServidorServicios</a></li>
+            <li><a href="#" class="index-link" data-slide="8">Configuración de Clientes</a></li>
+            <li><a href="#" class="index-link" data-slide="9">Instalación Zabbix</a></li>
+            <li><a href="#" class="index-link" data-slide="10">Monitorización</a></li>
+            <li><a href="#" class="index-link" data-slide="11">Triggers Personalizados</a></li>
+            <li><a href="#" class="index-link" data-slide="12">Pruebas de Estrés</a></li>
+            <li><a href="#" class="index-link" data-slide="13">Alertas y Acciones Automáticas</a></li>
+            <li><a href="#" class="index-link" data-slide="14">Resultado Final</a></li>
+            <li><a href="#" class="index-link" data-slide="15">Bibliografía</a></li>
+        </ul>
+    </section>
+
+    <!-- DESCRIPCIÓN -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Descripción del Proyecto</h1>
+                <ul>
+                    <li>Sistema completo de monitorización en red doméstica simulada.</li>
+                    <li>Integración de VirtualBox y GNS3 para topología realista.</li>
+                    <li>Zabbix como herramienta principal de monitorización.</li>
+                    <li>Supervisión en tiempo real y detección automática de fallos.</li>
+                    <li>Generación de alertas por correo electrónico.</li>
+                    <li>Panel de control profesional para visualización de métricas.</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJETIVO -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Objetivos del Proyecto</h1>
+                <h2>Técnicos:</h2>
+                <ul class="text-medium">
+                    <li>Diseñar topología de red doméstica funcional</li>
+                    <li>Integrar VirtualBox con GNS3</li>
+                    <li>Instalar Zabbix + MariaDB</li>
+                    <li>Monitorizar recursos en tiempo real</li>
+                    <li>Crear triggers personalizados</li>
+                    <li>Realizar pruebas de estrés</li>
+                </ul>
+                <h2>Formativos:</h2>
+                <ul class="text-medium">
+                    <li>Aprender administración Linux/Windows</li>
+                    <li>Documentación profesional</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- HERRAMIENTAS -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Herramientas y Tecnologías</h1>
+                <ul class="text-xlarge">
+                    <li><strong>VirtualBox:</strong> Virtualización de máquinas</li>
+                    <li><strong>GNS3:</strong> Simulación de topología de red</li>
+                    <li><strong>MariaDB:</strong> Base de datos</li>
+                    <li><strong>Zabbix:</strong> Monitorización profesional</li>
+                    <li><strong>BIND9 + Apache2:</strong> DNS y Web</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://copilot.microsoft.com/th/id/BCO.9e8732f8-3663-4248-864b-d6e490e9e1d8.png" alt="VirtualBox GNS3">
+            </div>
+        </div>
+    </section>
+
+    <!-- TOPOLOGÍA DE RED -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Topología de Red</h1>
+                <ul class="text-large">
+                    <li><strong>Switch Virtual en GNS3:</strong> Núcleo integrado</li>
+                    <li><strong>ServidorServicios (Router):</strong>
+                        <ul>
+                            <li>2 interfaces, IP forwarding, NAT</li>
+                            <li>⚠️ NO router independiente</li>
+                        </ul>
+                    </li>
+                    <li><strong>Servidor Zabbix:</strong> Monitorización centralizada</li>
+                    <li><strong>Cliente Ubuntu + Windows:</strong> Monitorizados</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://copilot.microsoft.com/th/id/BCO.1d8f1a33-19ba-43d8-87e6-998c579c5280.png" alt="Topología de Red">
+            </div>
+        </div>
+    </section>
+
+    <!-- ARQUITECTURA -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Arquitectura del Sistema</h1>
+                <h2>ServidorServicios (Router + DHCP + DNS + Web)</h2>
+                <ul style="font-size: 1em;">
+                    <li>2 interfaces de red configuradas</li>
+                    <li>NAT + IP forwarding activado</li>
+                    <li>DHCP Server (proporciona IPs dinámicas)</li>
+                    <li>DNS Server BIND9 (resolución de dominios)</li>
+                    <li>Web Server Apache2</li>
+                </ul>
+                <h2>Servidor Zabbix</h2>
+                <ul style="font-size: 1em;">
+                    <li>Zabbix Server (procesamiento de datos)</li>
+                    <li>Zabbix Frontend (interfaz web)</li>
+                    <li>MariaDB (almacenamiento de datos)</li>
+                </ul>
+                <h2>Clientes Monitorizados</h2>
+                <ul style="font-size: 1em;">
+                    <li>Cliente Ubuntu (agente Zabbix)</li>
+                    <li>Cliente Windows (agente Zabbix)</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://copilot.microsoft.com/th/id/BCO.14f98504-7d88-44d0-b3f9-b100e6529168.png" alt="Arquitectura">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFIGURACIÓN SERVIDOR SERVICIOS -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Configuración del ServidorServicios</h1>
+                <ul class="text-medium">
+                    <li><strong>Netplan:</strong> Interfaces de red</li>
+                    <li><strong>IP Forwarding:</strong> /etc/sysctl.conf</li>
+                    <li><strong>IPTables:</strong> NAT persistente</li>
+                    <li><strong>DHCP:</strong> Asignación dinámica</li>
+                    <li><strong>BIND9:</strong> Resolución DNS</li>
+                    <li><strong>Apache2:</strong> Servidor web</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://copilot.microsoft.com/th/id/BCO.dc7b6956-bd85-4de8-a3be-784d4822bd8a.png" alt="Red DHCP">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFIGURACIÓN CLIENTES -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Configuración de Clientes</h1>
+                <h2>Cliente Ubuntu</h2>
+                <ul class="text-medium">
+                    <li>IP dinámica por DHCP</li>
+                    <li>Pruebas de conectividad</li>
+                    <li>Agente Zabbix instalado</li>
+                </ul>
+                <h2>Cliente Windows</h2>
+                <ul class="text-medium">
+                    <li>Configuración DHCP</li>
+                    <li>Agente Zabbix</li>
+                    <li>Monitorización activa</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://copilot.microsoft.com/th/id/BCO.6acde16a-972d-47d6-8520-0c55cb2db574.png" alt="Clientes">
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTALLACIÓN ZABBIX -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Instalación del Servidor Zabbix</h1>
+                <ul class="text-large">
+                    <li><strong>Repositorio:</strong> Zabbix oficial</li>
+                    <li><strong>Componentes:</strong>
+                        <ul>
+                            <li>Zabbix Server + Frontend</li>
+                            <li>MariaDB (base de datos)</li>
+                            <li>Apache2 + PHP</li>
+                        </ul>
+                    </li>
+                    <li><strong>Verificación:</strong> Frontend accesible</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://copilot.microsoft.com/th/id/BCO.0023d344-0aa5-4bea-8a88-d28ec45f564b.png" alt="Zabbix Instalación">
+            </div>
+        </div>
+    </section>
+
+    <!-- MONITORIZACIÓN -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Monitorización</h1>
+                <ul class="text-large">
+                    <li><strong>Recursos:</strong> CPU, RAM, Disco</li>
+                    <li><strong>Conectividad:</strong> Ping, latencia, pérdida</li>
+                    <li><strong>Servicios:</strong> DHCP, DNS, Web</li>
+                    <li><strong>Visualización:</strong> Gráficos en tiempo real</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=400&fit=crop" alt="Monitorización de datos">
+            </div>
+        </div>
+    </section>
+
+    <!-- TRIGGERS -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Triggers Personalizados</h1>
+                <p><strong>Automatización de alertas ante condiciones críticas:</strong></p>
+                <ul class="text-large">
+                    <li><strong>CPU > 80%</strong> - Alerta</li>
+                    <li><strong>RAM < 500MB</strong> - Crítico</li>
+                    <li><strong>Disco < 5 GB</strong> - Crítico</li>
+                    <li><strong>Ping caído</strong> - Alerta inmediata</li>
+                    <li><strong>Servicios inactivos</strong> - Notificación</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://copilot.microsoft.com/th/id/BCO.c9ccd83c-a59c-4a56-8205-1d2dc9419c36.png" alt="Triggers CPU">
+            </div>
+        </div>
+    </section>
+
+    <!-- PRUEBAS -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Pruebas de Estrés</h1>
+                <h2>Comandos utilizados:</h2>
+                <ul class="text-medium">
+                    <li><strong>CPU:</strong> <code>stress --cpu 4 --timeout 20</code></li>
+                    <li><strong>RAM:</strong> <code>stress --vm 1 --vm-bytes 500MB</code></li>
+                    <li><strong>Disco:</strong> <code>dd if=/dev/zero of=/tmp/test bs=5000</code></li>
+                </ul>
+                <h2>Validación:</h2>
+                <ul class="text-medium">
+                    <li><code>top</code>, <code>free -h</code>, <code>df -h</code>, <code>ping</code></li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <img src="https://copilot.microsoft.com/th/id/BCO.8e2a2b8c-c79d-4311-b95b-8cf257571c47.png" alt="Pruebas RAM">
+            </div>
+        </div>
+    </section>
+
+    <!-- ALERTAS -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Alertas y Acciones Automáticas</h1>
+                <p><strong>Notificaciones en tiempo real ante eventos críticos:</strong></p>
+                <ul class="text-medium">
+                    <li><strong>Panel de Problemas:</strong> Visualización centralizada</li>
+                    <li><strong>Acciones Automáticas:</strong> "Problema" y "Recuperación"</li>
+                    <li><strong>Correos:</strong> Notificaciones a administradores</li>
+                    <li><strong>Alerts:</strong> Tiempo real en interfaz Zabbix</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <div class="danger-symbol">⚠️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h1>Resultado Final</h1>
+                <ul class="text-large">
+                    <li><strong>Red completamente simulada</strong> con GNS3 + VirtualBox</li>
+                    <li><strong>Monitorización profesional</strong> con Zabbix funcionando</li>
+                    <li><strong>Detección de fallos</strong> automática y en tiempo real</li>
+                    <li><strong>Alertas por correo</strong> configuradas y activas</li>
+                    <li><strong>Documentación completa</strong> del sistema</li>
+                    <li><strong>Pruebas validadas</strong> con resultados positivos</li>
+                </ul>
+            </div>
+            <div class="slide-image">
+                <div class="success-symbol">😊</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIBLIOGRAFÍA -->
+    <section class="slide">
+        <h1>Bibliografía y Referencias</h1>
+        <ul class="text-small">
+            <li><strong><a href="https://www.gns3.com/" target="_blank" class="bibliography-link">GNS3</a>:</strong> Simulador de redes de código abierto</li>
+            <li><strong><a href="https://www.virtualbox.org/" target="_blank" class="bibliography-link">VirtualBox</a>:</strong> Software de virtualización gratuito</li>
+            <li><strong><a href="https://www.zabbix.com/" target="_blank" class="bibliography-link">Zabbix</a>:</strong> Plataforma de monitorización empresarial</li>
+            <li><strong><a href="https://mariadb.org/" target="_blank" class="bibliography-link">MariaDB</a>:</strong> Base de datos relacional (MySQL compatible)</li>
+            <li><strong><a href="https://ubuntu.com/server" target="_blank" class="bibliography-link">Ubuntu Server</a>:</strong> Sistema operativo Linux para servidores</li>
+            <li><strong><a href="https://www.isc.org/bind/" target="_blank" class="bibliography-link">ISC BIND</a>:</strong> Servidor DNS más utilizado en internet</li>
+            <li><strong><a href="https://httpd.apache.org/" target="_blank" class="bibliography-link">Apache HTTP Server</a>:</strong> Servidor web más popular del mundo</li>
+        </ul>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="slide center">
+        <h1 class="big">Gracias por escucharnos</h1>
+        <h2 class="question-text">¿Preguntas?</h2>
+        <div class="author-section">
+            <p><strong>Ricardo Gordo</strong></p>
+            <p><strong>Alejandro Casatejada</strong></p>
+            <p><strong>Pablo Vélez</strong></p>
+        </div>
+        <p class="footer-text">
+            2º SMR – IES Clara del Rey – Madrid – 2026
+        </p>
+    </section>
+
+    <script src="Sistema-de-Monitorizacion-y-Control-de-Red-Domestica.js"></script>
+</body>
+</html>
