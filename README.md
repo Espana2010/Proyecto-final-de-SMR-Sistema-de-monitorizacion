@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-# Sistema de Monitorizaci�n y Control de Red Dom�stica  
-Proyecto Final � 2� SMR  
-Autores: **Ricardo Gordo, Alejandro Casatejada y Pablo V�lez**  
-Tutor: **C�sar**  
-IES Clara del Rey � Madrid  
-
----
-
-## ?? Descripci�n del Proyecto
-
-Este proyecto implementa un sistema completo de monitorizaci�n para una red dom�stica simulada mediante **VirtualBox** y **GNS3**.  
-El objetivo es supervisar el estado de los equipos, detectar fallos en tiempo real y generar alertas autom�ticas utilizando **Zabbix** como herramienta principal.
-=======
 # Sistema de Monitorización y Control de Red Doméstica  
 Proyecto Final – 2º SMR  
 Autores: **Ricardo Gordo, Alejandro Casatejada y Pablo Vélez**  
@@ -24,7 +10,6 @@ IES Clara del Rey – Madrid
 
 Este proyecto implementa un sistema completo de monitorización para una red doméstica simulada mediante **VirtualBox** y **GNS3**.  
 El objetivo es supervisar el estado de los equipos, detectar fallos en tiempo real y generar alertas automáticas utilizando **Zabbix** como herramienta principal.
->>>>>>> 35152ddbd8131d6771cd878b148a8f5816f6d80a
 
 La red incluye:
 
@@ -35,13 +20,8 @@ La red incluye:
 - Switch virtual en GNS3  
 
 **Importante:**  
-<<<<<<< HEAD
-En esta topolog�a **no existe un router independiente**.  
-El propio **ServidorServicios act�a como router**, ya que:
-=======
 En esta topología **no existe un router independiente**.  
 El propio **ServidorServicios actúa como router**, ya que:
->>>>>>> 35152ddbd8131d6771cd878b148a8f5816f6d80a
 
 - Tiene **dos interfaces de red**  
 - Tiene **IP forwarding activado**  

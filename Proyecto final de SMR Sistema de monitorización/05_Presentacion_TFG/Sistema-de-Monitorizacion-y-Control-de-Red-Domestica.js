@@ -68,11 +68,7 @@ function startFireworks() {
     existing.forEach(el => el.remove());
     
     // Reproducir sonido de aplausos
-    const applause = document.getElementById('applauseSound');
-    if (applause) {
-        applause.currentTime = 0;
-        applause.play().catch(err => console.log('Audio no se pudo reproducir:', err));
-    }
+    playApplauseSound();
     
     // Crear múltiples fuegos artificiales
     for (let i = 0; i < 40; i++) {
@@ -80,6 +76,49 @@ function startFireworks() {
             createFirework();
         }, i * 80);
     }
+}
+
+// Función para generar sonido de aplausos con Web Audio API
+function playApplauseSound() {
+    try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const now = audioContext.currentTime;
+        
+        // Crear múltiples aplausos
+        for (let i = 0; i < 8; i++) {
+            createClap(audioContext, now + i * 0.15);
+        }
+    } catch (e) {
+        console.log('Web Audio API no disponible');
+    }
+}
+
+// Crear un aplauso individual
+function createClap(audioContext, startTime) {
+    const duration = 0.1;
+    const now = audioContext.currentTime;
+    const time = Math.max(startTime, now);
+    
+    // Crear oscilador para el sonido
+    const osc = audioContext.createOscillator();
+    const gain = audioContext.createGain();
+    
+    osc.connect(gain);
+    gain.connect(audioContext.destination);
+    
+    // Frecuencia variable para sonido más natural
+    osc.frequency.setValueAtTime(200 + Math.random() * 150, time);
+    osc.frequency.exponentialRampToValueAtTime(100, time + duration);
+    
+    // Envelope de volumen
+    gain.gain.setValueAtTime(0.3, time);
+    gain.gain.exponentialRampToValueAtTime(0.01, time + duration);
+    
+    // Tipo de onda para sonido más orgánico
+    osc.type = 'sine';
+    
+    osc.start(time);
+    osc.stop(time + duration);
 }
 
 function createFirework() {
