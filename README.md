@@ -99,7 +99,7 @@ Incluye:
 - Instalación y configuración de BIND9  
 - Instalación de Apache2  
 
-Todas las capturas están documentadas en la memoria final: [memoria_final](02_Memoria)
+Todas las capturas están documentadas en la memoria final: [memoria_final](Proyecto final de SMR Sistema de monitorización/02_Memoria)
 
 ---
 
