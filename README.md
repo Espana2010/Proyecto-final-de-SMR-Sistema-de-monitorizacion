@@ -99,7 +99,8 @@ Incluye:
 - Instalación y configuración de BIND9  
 - Instalación de Apache2  
 
-Todas las capturas están documentadas en la memoria final: [docs/00-RA.md](../docs/00-RA.md)
+Todas las capturas están documentadas en la memoria final: [📁 Ir a la carpeta de Memoria](./02_Memoria)
+
 
 ---
 
