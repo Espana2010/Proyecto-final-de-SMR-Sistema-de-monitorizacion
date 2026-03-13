@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Presentación TFG - Sistema de Monitorización</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    section {
+        height: 100vh;
+        padding: 60px;
+        box-sizing: border-box;
+    }
+    h1, h2 {
+        color: #4db8ff;
+    }
+    .slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .center {
+        text-align: center;
+    }
+    .big {
+        font-size: 2.5em;
+    }
+    ul {
+        font-size: 1.4em;
+        line-height: 1.6em;
+    }
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<section class="slide center">
+    <h1 class="big">Sistema de Monitorización y Control de Red Doméstica</h1>
+    <h2>Proyecto Final – 2º SMR</h2>
+    <p>Ricardo Gordo</p>
+</section>
+
+<!-- OBJETIVO -->
+<section class="slide">
+    <h1>Objetivo del Proyecto</h1>
+    <ul>
+        <li>Simular una red doméstica completa.</li>
+        <li>Monitorizar equipos y servicios en tiempo real.</li>
+        <li>Detectar fallos, caídas y problemas de rendimiento.</li>
+        <li>Automatizar alertas y notificaciones.</li>
+        <li>Aprender herramientas profesionales de administración.</li>
+    </ul>
+</section>
+
+<!-- ARQUITECTURA -->
+<section class="slide">
+    <h1>Arquitectura del Sistema</h1>
+    <ul>
+        <li>VirtualBox: máquinas virtuales.</li>
+        <li>GNS3: topología de red.</li>
+        <li>Servidor Zabbix + MariaDB.</li>
+        <li>Clientes Windows y Ubuntu.</li>
+        <li>ServidorServicios con DHCP, DNS y Web.</li>
+    </ul>
+</section>
+
+<!-- INSTALACIÓN -->
+<section class="slide">
+    <h1>Instalación y Configuración</h1>
+    <ul>
+        <li>Instalación de Ubuntu Server.</li>
+        <li>Instalación de Zabbix Server + MariaDB.</li>
+        <li>Instalación de agentes en cada equipo.</li>
+        <li>Asociación de plantillas de monitorización.</li>
+    </ul>
+</section>
+
+<!-- MONITORIZACIÓN -->
+<section class="slide">
+    <h1>Monitorización</h1>
+    <ul>
+        <li>CPU, RAM, Disco.</li>
+        <li>Ping y latencia.</li>
+        <li>Interfaces de red.</li>
+        <li>Servicios del ServidorServicios.</li>
+        <li>Gráficos y métricas en tiempo real.</li>
+    </ul>
+</section>
+
+<!-- TRIGGERS -->
+<section class="slide">
+    <h1>Triggers Personalizados</h1>
+    <ul>
+        <li>CPU alta.</li>
+        <li>RAM baja.</li>
+        <li>Disco bajo.</li>
+        <li>Ping caído.</li>
+        <li>Pérdida de paquetes.</li>
+    </ul>
+</section>
+
+<!-- PRUEBAS -->
+<section class="slide">
+    <h1>Pruebas de Estrés</h1>
+    <ul>
+        <li>CPU: <code>stress --cpu 4</code></li>
+        <li>RAM: <code>stress --vm 1 --vm-bytes 6G</code></li>
+        <li>Disco: <code>dd if=/dev/zero of=/tmp/testfile</code></li>
+        <li>Validación manual con <code>top</code>, <code>free -h</code>, <code>df -h</code>.</li>
+    </ul>
+</section>
+
+<!-- ALERTAS -->
+<section class="slide">
+    <h1>Alertas y Acciones Automáticas</h1>
+    <ul>
+        <li>Panel de problemas en Zabbix.</li>
+        <li>Acción “Problema” configurada.</li>
+        <li>Envío de correo a administradores.</li>
+        <li>Notificaciones en tiempo real.</li>
+    </ul>
+</section>
+
+<!-- RESULTADO -->
+<section class="slide">
+    <h1>Resultado Final</h1>
+    <ul>
+        <li>Red doméstica completamente simulada.</li>
+        <li>Monitorización profesional con Zabbix.</li>
+        <li>Detección de fallos en tiempo real.</li>
+        <li>Automatización de alertas.</li>
+        <li>Documentación completa del sistema.</li>
+    </ul>
+</section>
+
+<!-- CIERRE -->
+<section class="slide center">
+    <h1 class="big">Gracias por su atención</h1>
+    <p>¿Preguntas?</p>
+</section>
+
+</body>
+</html>
