@@ -192,12 +192,6 @@ Zabbix envía alertas por correo cuando:
 
 ---
 
-## Capturas
-
-[Evidencias](01_Capturas/)
-
----
-
 ## Conclusión
 
 Este proyecto demuestra la implementación completa de un sistema de monitorización profesional en un entorno doméstico simulado.  
