@@ -99,7 +99,7 @@ Incluye:
 - Instalación y configuración de BIND9  
 - Instalación de Apache2  
 
-Todas las capturas están documentadas en la memoria final: [📁 Ir a la carpeta de Memoria](./02_Memoria)
+Todas las capturas están documentadas en la memoria final: [📄 Ver Anteproyecto](./02_Memoria/Casatejada_Gordo_Velez_SMR_Anteproyecto.pdf)
 
 
 ---
