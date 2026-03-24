@@ -57,3 +57,6 @@ Red de monitorización basada en **Zabbix** para supervisión de sistemas en un 
 ✓ Clientes con gestión DHCP  
 ✓ Conectividad WAN para acceso remoto
 
+<img width="1408" height="768" alt="Gemini_Generated_Image_klkqobklkqobklkq" src="https://github.com/user-attachments/assets/ada899d6-1a88-4817-a82a-27017115b9db" />
+
+
