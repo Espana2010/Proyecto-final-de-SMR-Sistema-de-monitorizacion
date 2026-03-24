@@ -15,9 +15,9 @@ Red de monitorización basada en **Zabbix** para supervisión de sistemas en un 
 
 ## Diagrama de la Topología
 
-```
-  <img width="1408" height="768" alt="Gemini_Generated_Image_klkqobklkqobklkq" src="https://github.com/user-attachments/assets/ada899d6-1a88-4817-a82a-27017115b9db" />
-```
+
+<img width="1408" height="768" alt="Gemini_Generated_Image_klkqobklkqobklkq" src="https://github.com/user-attachments/assets/ada899d6-1a88-4817-a82a-27017115b9db" />
+
 
 ---
 
