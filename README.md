@@ -1,10 +1,15 @@
-# Sistema de Monitorización y Control de Red Doméstica  
+﻿# Sistema de Monitorización y Control de Red Doméstica  
 Proyecto Final – 2º SMR  
 Autores: **Ricardo Gordo, Alejandro Casatejada y Pablo Vélez**  
 Tutor: **César**  
 IES Clara del Rey – Madrid  
 
 ---
+## Presentación TFC
+https://monitorizacion.netlify.app/
+
+---
+
 
 ## Descripción del Proyecto
 
@@ -196,6 +201,7 @@ Zabbix envía alertas por correo cuando:
 
 Este proyecto demuestra la implementación completa de un sistema de monitorización profesional en un entorno doméstico simulado.  
 Permite detectar fallos reales, generar alertas automáticas y visualizar el estado de la red en tiempo real.
+
 
 ---
 
