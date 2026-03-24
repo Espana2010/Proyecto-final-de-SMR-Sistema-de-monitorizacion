@@ -16,29 +16,7 @@ Red de monitorización basada en **Zabbix** para supervisión de sistemas en un 
 ## Diagrama de la Topología
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                      INTERNET / WAN                             │
-│                     10.0.3.15                                   │
-└────────────────────────┬─────────────────────────────────────────┘
-                         │
-                    ┌────┴────┐
-                    │ Gateway  │
-                    │ WAN      │
-                    └────┬────┘
-                         │
-                    ┌────┴──────────────────┐
-                    │   LAN: 192.168.10.0/24 │
-                    └────┬──────────────────┘
-                         │
-        ┌────────────────┼────────────────┬──────────────┐
-        │                │                │              │
-   ┌────▼─────┐     ┌────▼────┐    ┌────▼─────┐   ┌────▼─────┐
-   │ Services │     │ Zabbix  │    │ Ubuntu 1 │   │ Windows 2 │
-   │ Server   │     │ Server  │    │ (Client) │   │ (Client)  │
-   │192.168.. │     │192.168..│    │192.168.. │   │192.168..  │
-   │  10.1    │     │  10.10  │    │ 10.100   │   │ 10.101    │
-   │(Fijo)    │     │(Fijo)   │    │ (DHCP)   │   │ (DHCP)    │
-   └──────────┘     └─────────┘    └──────────┘   └───────────┘
+  <img width="1408" height="768" alt="Gemini_Generated_Image_klkqobklkqobklkq" src="https://github.com/user-attachments/assets/ada899d6-1a88-4817-a82a-27017115b9db" />
 ```
 
 ---
@@ -82,6 +60,6 @@ Red de monitorización basada en **Zabbix** para supervisión de sistemas en un 
 ✓ Clientes con gestión DHCP  
 ✓ Conectividad WAN para acceso remoto
 
-<img width="1408" height="768" alt="Gemini_Generated_Image_klkqobklkqobklkq" src="https://github.com/user-attachments/assets/ada899d6-1a88-4817-a82a-27017115b9db" />
+
 
 
