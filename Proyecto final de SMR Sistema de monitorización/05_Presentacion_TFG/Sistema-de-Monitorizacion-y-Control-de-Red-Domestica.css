@@ -219,7 +219,7 @@ h2 {
 
 .slide-image img {
     max-width: 100%;
-    max-height: 350px;
+    max-height: 1000px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(77, 184, 255, 0.3);
     transition: transform 0.3s ease;
