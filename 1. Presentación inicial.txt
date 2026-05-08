@@ -1,0 +1,173 @@
+1. Presentación inicial
+“Buenos días, somos Ricardo, Pablo y Alejandro, y vamos a presentar nuestro proyecto:
+Sistema de Monitorización y Control de Red Doméstica con Zabbix.
+
+Hemos creado una red doméstica completa usando GNS3 y VirtualBox, con:
+
+Un ServidorServicios (DHCP + DNS + NAT + Apache)
+
+Un Servidor Zabbix
+
+Un Cliente Ubuntu
+
+Un Cliente Windows
+
+Y todo está monitorizado en tiempo real.”
+
+🟦 2. Demostración de la red funcionando
+✔️ 2.1 Mostrar IPs de cada máquina
+En ServidorServicios:
+Código
+ip a
+Explicación:
+
+“Aquí vemos que el servidor tiene dos interfaces:
+
+enp0s3 → LAN 192.168.10.1
+
+enp0s8 → WAN con salida a Internet.”
+
+En Cliente Ubuntu:
+Código
+ip a
+ip route
+Explicación:
+
+“El cliente recibe IP por DHCP y tiene como gateway el ServidorServicios.”
+
+En Cliente Windows:
+Código
+ipconfig
+🟦 3. Demostrar que DHCP funciona
+En Cliente Ubuntu:
+
+Código
+ip a
+En Cliente Windows:
+
+Código
+ipconfig
+Explicación:
+
+“Ambos clientes reciben automáticamente una IP del rango 192.168.10.100–200, lo que demuestra que el servidor DHCP está funcionando.”
+
+🟦 4. Demostrar que DNS funciona
+✔️ En Cliente Ubuntu:
+Código
+nslookup router.redlocal.local
+✔️ En Cliente Windows:
+Código
+nslookup router.redlocal.local
+Explicación:
+
+“El DNS interno resuelve router.redlocal.local a 192.168.10.1, lo que confirma que BIND9 está funcionando correctamente.”
+
+🟦 5. Demostrar que NAT funciona (salida a Internet)
+En Cliente Ubuntu:
+Código
+ping -c 4 8.8.8.8
+ping -c 4 google.com
+En Cliente Windows:
+Código
+ping 8.8.8.8
+ping google.com
+Explicación:
+
+“Los clientes salen a Internet a través del ServidorServicios, lo que demuestra que el NAT está funcionando.”
+
+🟦 6. Demostrar que el servidor web Apache funciona
+En Cliente Ubuntu o Windows:
+Abrir navegador y poner:
+
+Código
+http://192.168.10.1
+Explicación:
+
+“Aquí vemos la página Servidor Router funcionando, lo que confirma que Apache está operativo.”
+
+🟦 7. Demostrar que Zabbix está funcionando
+✔️ Entrar al panel web:
+Código
+http://192.168.10.10/zabbix
+Explicación:
+
+“Este es el panel de Zabbix, donde monitorizamos todos los equipos en tiempo real.”
+
+✔️ Mostrar hosts:
+Menú → Monitoring → Hosts
+
+Explicación:
+
+“Aquí vemos los cuatro equipos monitorizados: ServidorServicios, Servidor Zabbix, Cliente Ubuntu y Cliente Windows.”
+
+✔️ Mostrar gráficas:
+Menú → Monitoring → Latest data
+
+Explicación:
+
+“Zabbix recoge métricas de CPU, RAM, disco, ping, servicios, etc.”
+
+🟦 8. Demostrar triggers personalizados
+✔️ Mostrar triggers:
+Menú → Monitoring → Problems
+
+Explicación:
+
+“Hemos creado triggers personalizados para CPU alta, RAM baja, disco bajo y pérdida de ping.”
+
+🟦 9. Demostrar pruebas de estrés (para que salten los triggers)
+✔️ 9.1 Estrés de CPU (en Cliente Ubuntu)
+Código
+sudo apt install stress
+stress --cpu 4 --timeout 20
+Explicación:
+
+“Esto fuerza la CPU al 100%. En unos segundos, Zabbix detecta el problema.”
+
+Mostrar en Zabbix:
+
+“Aquí aparece el trigger de CPU alta.”
+
+✔️ 9.2 Estrés de RAM
+Código
+stress --vm 1 --vm-bytes 6G
+Explicación:
+
+“Esto consume casi toda la RAM. Zabbix detecta memoria baja.”
+
+✔️ 9.3 Estrés de disco
+Código
+dd if=/dev/zero of=/tmp/test bs=1M
+Explicación:
+
+“Esto llena el disco temporalmente. Zabbix detecta espacio bajo.”
+
+🟦 10. Demostrar alertas automáticas
+Explicación:
+
+“Cuando un trigger pasa a PROBLEM, Zabbix envía un correo automático al administrador.”
+
+(En caso de no tener correo configurado, decirlo claramente.)
+
+🟦 11. Cierre de la defensa
+“En conclusión, hemos creado una red doméstica completamente funcional, con servicios de red esenciales y un sistema profesional de monitorización con Zabbix.
+
+Hemos demostrado:
+
+DHCP funcionando
+
+DNS funcionando
+
+NAT funcionando
+
+Apache funcionando
+
+Conectividad total
+
+Monitorización en tiempo real
+
+Triggers personalizados
+
+Pruebas de estrés detectadas
+
+Gracias por su atención.”
