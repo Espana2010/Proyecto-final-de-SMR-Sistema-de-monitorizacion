@@ -12,9 +12,9 @@ Un Cliente Ubuntu
 
 Un Cliente Windows
 
-Y todo está monitorizado en tiempo real.”
+Y todo está monitorizado en tiempo real.” (Ricardo) + la presentacion
 
-🟦 2. Demostración de la red funcionando
+🟦 2. Demostración de la red funcionando (pablo)
 ✔️ 2.1 Mostrar IPs de cada máquina
 En ServidorServicios:
 Código
@@ -38,7 +38,7 @@ Explicación:
 En Cliente Windows:
 Código
 ipconfig
-🟦 3. Demostrar que DHCP funciona
+🟦 3. Demostrar que DHCP funciona (pablo)
 En Cliente Ubuntu:
 
 Código
@@ -51,7 +51,7 @@ Explicación:
 
 “Ambos clientes reciben automáticamente una IP del rango 192.168.10.100–200, lo que demuestra que el servidor DHCP está funcionando.”
 
-🟦 4. Demostrar que DNS funciona
+🟦 4. Demostrar que DNS funciona (pablo)
 ✔️ En Cliente Ubuntu:
 Código
 nslookup router.redlocal.local
@@ -62,7 +62,7 @@ Explicación:
 
 “El DNS interno resuelve router.redlocal.local a 192.168.10.1, lo que confirma que BIND9 está funcionando correctamente.”
 
-🟦 5. Demostrar que NAT funciona (salida a Internet)
+🟦 5. Demostrar que NAT funciona (salida a Internet) (pablo)
 En Cliente Ubuntu:
 Código
 ping -c 4 8.8.8.8
@@ -75,7 +75,7 @@ Explicación:
 
 “Los clientes salen a Internet a través del ServidorServicios, lo que demuestra que el NAT está funcionando.”
 
-🟦 6. Demostrar que el servidor web Apache funciona
+🟦 6. Demostrar que el servidor web Apache funciona (pablo)
 En Cliente Ubuntu o Windows:
 Abrir navegador y poner:
 
@@ -85,7 +85,7 @@ Explicación:
 
 “Aquí vemos la página Servidor Router funcionando, lo que confirma que Apache está operativo.”
 
-🟦 7. Demostrar que Zabbix está funcionando
+🟦 7. Demostrar que Zabbix está funcionando (pablo)
 ✔️ Entrar al panel web:
 Código
 http://192.168.10.10/zabbix
@@ -107,7 +107,7 @@ Explicación:
 
 “Zabbix recoge métricas de CPU, RAM, disco, ping, servicios, etc.”
 
-🟦 8. Demostrar triggers personalizados
+🟦 8. Demostrar triggers personalizados (alex)
 ✔️ Mostrar triggers:
 Menú → Monitoring → Problems
 
@@ -115,8 +115,8 @@ Explicación:
 
 “Hemos creado triggers personalizados para CPU alta, RAM baja, disco bajo y pérdida de ping.”
 
-🟦 9. Demostrar pruebas de estrés (para que salten los triggers)
-✔️ 9.1 Estrés de CPU (en Cliente Ubuntu)
+🟦 9. Demostrar pruebas de estrés (para que salten los triggers) (alex)
+✔️ 9.1 Estrés de CPU (en Cliente Ubuntu) (no se hace)
 Código
 sudo apt install stress
 stress --cpu 4 --timeout 20
@@ -141,8 +141,11 @@ dd if=/dev/zero of=/tmp/test bs=1M
 Explicación:
 
 “Esto llena el disco temporalmente. Zabbix detecta espacio bajo.”
+9.4 Pinga caído
 
-🟦 10. Demostrar alertas automáticas
+Desconectamos el cable y sale la alerta
+
+🟦 10. Demostrar alertas automáticas (alex)
 Explicación:
 
 “Cuando un trigger pasa a PROBLEM, Zabbix envía un correo automático al administrador.”
