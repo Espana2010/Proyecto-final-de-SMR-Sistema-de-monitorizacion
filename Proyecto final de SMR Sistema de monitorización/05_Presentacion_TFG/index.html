@@ -40,10 +40,9 @@
             <li><a href="#" class="index-link" data-slide="3">Objetivos</a></li>
             <li><a href="#" class="index-link" data-slide="4">Herramientas y Tecnologías</a></li>
             <li><a href="#" class="index-link" data-slide="5">Topología de Red</a></li>
-            <li><a href="#" class="index-link" data-slide="6">Arquitectura del Sistema</a></li>
-            <li><a href="#" class="index-link" data-slide="7">Configuración ServidorServicios</a></li>
-            <li><a href="#" class="index-link" data-slide="8">Configuración de Clientes</a></li>
-            <li><a href="#" class="index-link" data-slide="9">Instalación Zabbix</a></li>
+            <li><a href="#" class="index-link" data-slide="6">Configuración ServidorServicios</a></li>
+            <li><a href="#" class="index-link" data-slide="7">Configuración de Clientes</a></li>
+            <li><a href="#" class="index-link" data-slide="8">Instalación Zabbix</a></li>
             <li><a href="#" class="index-link" data-slide="10">Monitorización</a></li>
             <li><a href="#" class="index-link" data-slide="11">Triggers Personalizados</a></li>
             <li><a href="#" class="index-link" data-slide="12">Pruebas de Estrés</a></li>
@@ -135,37 +134,6 @@
             </div>
             <div class="slide-image">
                 <img src="Fotos/Topologia.png" alt="Topología de Red">
-            </div>
-        </div>
-    </section>
-
-    <!-- ARQUITECTURA -->
-    <section class="slide">
-        <div class="slide-content">
-            <div class="slide-text">
-                <h1>Arquitectura del Sistema</h1>
-                <h2>ServidorServicios (Router + DHCP + DNS + Web)</h2>
-                <ul style="font-size: 1em;">
-                    <li>2 interfaces de red configuradas</li>
-                    <li>NAT + IP forwarding activado</li>
-                    <li>DHCP Server (proporciona IPs dinámicas)</li>
-                    <li>DNS Server BIND9 (resolución de dominios)</li>
-                    <li>Web Server Apache2</li>
-                </ul>
-                <h2>Servidor Zabbix</h2>
-                <ul style="font-size: 1em;">
-                    <li>Zabbix Server (procesamiento de datos)</li>
-                    <li>Zabbix Frontend (interfaz web)</li>
-                    <li>MariaDB (almacenamiento de datos)</li>
-                </ul>
-                <h2>Clientes Monitorizados</h2>
-                <ul style="font-size: 1em;">
-                    <li>Cliente Ubuntu (agente Zabbix)</li>
-                    <li>Cliente Windows (agente Zabbix)</li>
-                </ul>
-            </div>
-            <div class="slide-image">
-                <img src="Fotos/arquitectura.png" alt="Arquitectura del Sistema">
             </div>
         </div>
     </section>
